@@ -396,3 +396,8 @@ ndeadly/switch2_controller_research, german77/JoyconDriver, TheFrano/joycon2py
 and darthcloud/BlueRetro. The XInput, DS4 and Switch Pro descriptors and protocol
 handling follow [GP2040-CE](https://github.com/OpenStickCommunity/GP2040-CE) (MIT);
 the web configurator approach follows GP2040-CE too.
+
+Third-party licences: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), with
+each licence verbatim in [LICENSES/](LICENSES/) (HIDMaestro, GP2040-CE and
+sc2-research are MIT, SDL is zlib). The same files ship in `dist/` beside the
+firmware images and on the tool page.

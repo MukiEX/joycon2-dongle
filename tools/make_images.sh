@@ -61,3 +61,9 @@ if [ -d build-lcd147 ]; then
   check_version build-lcd147/joycon2_dongle.bin lcd147
   merge build-lcd147 "joycon2-dongle-$VER-lcd147-merged.bin"
 fi
+# The licences travel with the images: GPL-3.0 for the firmware, and the
+# third-party notices (HIDMaestro, GP2040-CE, sc2-research: MIT; SDL: zlib).
+rm -rf dist/LICENSES
+cp LICENSE THIRD_PARTY_NOTICES.md dist/
+cp -r LICENSES dist/LICENSES
+echo "licences copied to dist/"

@@ -58,6 +58,18 @@ def svg(name):
 t = (t.replace('__SVG_SHORTCUTS__', svg('shortcuts.svg'))
       .replace('__SVG_BOOT__', svg('boot-button.svg'))
       .replace('__SVG_MODES__', svg('modes.svg')))
+# Third-party licences, verbatim from LICENSES/ (they ship with the images).
+import html
+lic = [('HIDMaestro', 'MIT', 'HIDMaestro_LICENSE.txt', 'Steam Controller mode: report descriptor, USB layout, command answers'),
+       ('GP2040-CE', 'MIT', 'GP2040-CE_LICENSE.txt', 'XInput, DS4 and Switch Pro descriptors and protocol handling'),
+       ('sc2-research', 'MIT', 'sc2-research_LICENSE.txt', 'Steam Controller haptic reports'),
+       ('SDL', 'zlib', 'SDL_LICENSE.txt', 'Steam Controller input layout (reference)')]
+parts = []
+for name, kind, fn, what in lic:
+    text = open(os.path.join(repo, 'LICENSES', fn), encoding='utf-8').read()
+    parts.append(f'      <h4>{html.escape(name)} ({kind}): {html.escape(what)}</h4>\n'
+                 f'      <pre>{html.escape(text)}</pre>')
+t = t.replace('__THIRD_PARTY_LICENSES__', '\n'.join(parts))
 left = re.findall(r'__[A-Z0-9_]+__', t)
 assert not left, left
 open(out, 'w').write(t)

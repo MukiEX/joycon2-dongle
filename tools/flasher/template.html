@@ -198,6 +198,11 @@ footer a { color: inherit; }
 .tp-stats { white-space: pre-line; font: 500 13px var(--font-mono); font-variant-numeric: tabular-nums; color: var(--muted); margin-top: 6px; line-height: 1.6; }
 .mv-checks li { margin: 3px 0; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  details.licences { margin-top: 8px; }
+  details.licences summary { cursor: pointer; }
+  details.licences h4 { margin: 14px 0 4px; font-size: 13px; }
+  details.licences pre { white-space: pre-wrap; word-break: break-word; font-size: 11px; max-height: 260px; overflow: auto;
+                         background: rgba(127,127,127,.08); padding: 8px; border-radius: 6px; margin: 0; }
 </style>
 </head>
 <body>
@@ -440,6 +445,10 @@ footer a { color: inherit; }
   <footer>
     Uses Espressif's <a href="https://github.com/espressif/esptool-js" target="_blank" rel="noopener">esptool-js</a>, loaded from a CDN, so this page needs an internet connection.
     Firmware: Joy-Con 2 Dongle, GPL-3.0, based on Switch2Connect.
+    <details class="licences">
+      <summary>Third-party licences (in every firmware image)</summary>
+__THIRD_PARTY_LICENSES__
+    </details>
   </footer>
 </main>
 

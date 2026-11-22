@@ -10,6 +10,9 @@
 // * Haptic output reports 0x81..0x85 (sides, gain in dB): sc2-research's
 //   HAPTICS.md (MIT), after iczero/steam-controller-stuff.
 //
+// Licences: LICENSES/HIDMaestro_LICENSE.txt, LICENSES/sc2-research_LICENSE.txt,
+// LICENSES/SDL_LICENSE.txt (see THIRD_PARTY_NOTICES.md).
+//
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include <math.h>
 #include <stdio.h>

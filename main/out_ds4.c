@@ -3,6 +3,8 @@
 // through from the controller; the touchpad takes the Joy-Con mouse sensors
 // and the GL / GR half-clicks (out_touch.c).
 //
+// GP2040-CE licence: LICENSES/GP2040-CE_LICENSE.txt (see THIRD_PARTY_NOTICES.md).
+//
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include <math.h>
 #include <string.h>
